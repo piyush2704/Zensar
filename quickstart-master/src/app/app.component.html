@@ -1,0 +1,53 @@
+<div id="other_formats" class="panel panel_chrome">
+    <div class="panel_header">
+        <h3>Other Formats</h3>
+    </div>
+    <div class="panel_content">
+        <table summary="A table listing various other formats for this product">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col" class="site amount"><span>price</span></th>
+                    <th scope="col" class="market_place amount"><span>New from</span></th>
+                    <th scope="col" class="market_place amount"><span>Used from</span></th>
+                    <th scope="col" class="market_place amount"><span>Edit</span></th>
+                    <th scope="col" class="market_place amount"><span>Delete</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="active" *ngFor="let tableData of Data">
+                    <th scope="col"><a href="#">{{tableData.type}}</a></th>
+                    <td scope="col" class="site amount"><span>{{tableData.price}}</span></td>
+                    <td scope="col" class="market_place amount"><span>{{tableData.newForm}}</span></td>
+                    <td scope="col" class="market_place amount"><span>{{tableData.usedFrom}}</span></td>
+
+                    <td scope="col" class="market_place amount" (click)="_edit(tableData)"><span><img src="../app/images.png"></span></td>
+                    <td scope="col" class="market_place amount" (click)="_delete(tableData)"><span>X</span></td>
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+    <form id="form" #dataForm="ngForm" (ngSubmit)="save(dataForm)">
+        <div class="formData">
+            <div class="form-group">
+                <input type="text" class="form-control" (ngModel)="type" name="type" required [value]="_loadData.type">
+                <p *ngIf="dataForm.controls.type?.invalid && dataForm.controls.type?.touched" class="alert alert-danger">Please input the value</p>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" (ngModel)="price" name="price" [value]="_loadData.price" required>
+                <p *ngIf="dataForm.controls.price?.invalid && dataForm.controls.price?.touched" class="alert alert-danger">Please input the value</p>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" (ngModel)="newForm" [value]="_loadData.newForm" name="newForm" required>
+                <p *ngIf="dataForm.controls.newForm?.invalid && dataForm.controls.newForm?.touched" class="alert alert-danger">Please input the value</p>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" (ngModel)="usedFrom" [value]="_loadData.usedFrom" name="usedFrom" required>
+                <p *ngIf="dataForm.controls.usedFrom?.invalid && dataForm.controls.usedFrom?.touched" class="alert alert-danger">Please input the value</p>
+            </div>
+            <button type="submit" class="btn btn-success">Add new row</button>
+        </div>
+    </form>
+</div>

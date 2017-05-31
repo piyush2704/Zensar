@@ -1,0 +1,143 @@
+.panel.panel_chrome {
+    border: 1px solid #ccc;
+    width: 70%;
+    margin: 10%;
+    position: relative;
+}
+
+th {
+    border-bottom: 1px solid #ccc;
+}
+
+tbody tr:last-child td:nth-child(2) {
+    background-color: #ffddcc;
+    /* padding-bottom: 19px; */
+    position: absolute;
+    border: none;
+    padding: 12px 0px 31px 0px;
+    border-radius: 5px;
+}
+
+tbody tr:last-child td:nth-child(2) span {
+    background-color: white;
+    padding: 12px 52px 11px 21px;
+}
+
+.panel_header {
+    background-color: #d9d9d9;
+    padding: 1px 0px 7px 15px;
+}
+
+table {
+    background-color: transparent;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    border-top: none;
+}
+
+img {
+    height: 15px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 1px;
+    margin-left: 5px;
+}
+
+button {
+    width: 30%;
+    padding: 9px;
+    margin: 24px 10px 10px 5px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+tr {
+    height: 40px;
+    border: 1px solid #ccc;
+}
+
+thead tr {
+    border: none;
+}
+
+thead tr th {
+    text-align: left;
+    padding: 32px 0px 13px 0px;
+    border-right: none;
+}
+
+thead th:nth-child(2) span {
+    background-color: #ffddcc;
+    border: 1px solid #ff884d;
+    padding: 28% 9% 9% 51%;
+    border-radius: 5px;
+    border-right: none;
+}
+
+thead th:nth-child(3) span,
+thead th:nth-child(4) span {
+    background-color: #ccc;
+    border: 1px solid grey;
+    padding: 28% 9% 9% 40%;
+    border-radius: 5px;
+}
+
+tr th:nth-child(1) {
+    width: 35%;
+}
+
+tr th:nth-child(2),
+tr th:nth-child(3),
+tr th:nth-child(4) {
+    width: 17%;
+}
+
+tr th:nth-child(5),
+tr th:nth-child(6) {
+    width: 3%;
+}
+
+tbody td:nth-child(2) span {
+    border-left: 1px solid #ff884d;
+    border-right: none;
+    padding: 0px 10px 0px 0px;
+    padding: 20px;
+}
+
+tbody td:nth-child(3) span,
+tbody td:nth-child(4) span {
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    display: block;
+    width: 83%;
+    padding: 10px 2px 1px 8px;
+    height: 33px;
+}
+
+tbody td:nth-child(2),
+tbody td:nth-child(3),
+tbody td:nth-child(4) {
+    border-bottom: 2px dashed #ccc;
+}
+
+tbody td:nth-child(2) span {
+    padding-left: 10px;
+}
+
+.formData .form-group {
+    display: inline-block;
+}
+
+.formData {
+    margin-top: 25%;
+}
+
+.formData .form-group:nth-child(1) {
+    width: 30%;
+}
